@@ -1,3 +1,31 @@
+[Ver.52] 2026-11-25
+[새 기능]
+- Windows 95 / 98 게임 지원 (Win9x 패키지 형식: image.img + DosBox 폴더)
+  · 런처 패키지 폴더를 지정하면 게임마다 지정된 실행기로 자동 실행
+    (DOSBox 0.74_Daum / SVN / ECE / DOSBox-X, PCem, 86Box)
+  · 런처 패키지로 실행할 수 없는 게임은 '직접 DOSBox 설정' 값으로 생성
+  · 게임 폴더 [찾기]가 런처 패키지 폴더\Games 에서 시작
+- 86Box 실행 지원 추가
+- 패키지 형식 DOS 게임 지원 (DosBox\autoexec.conf + DosBox\CD)
+  · 게임 폴더를 C:, CD 이미지를 D: 로 연결하고 autoexec.conf 명령으로 실행
+  · 게임 실행기 → 기본 실행기 → 패키지에 있는 DOSBox 순으로 자동 선택
+- blueMSX+ 지원
+  · blueMSX+.exe 선택 가능
+  · 기종 목록을 blueMSX(+) 폴더의 Machines 폴더에서 읽어옴
+    (예: MSXturboR - C-BIOS → Burai II, Seed of Dragon 등 한글 폰트 필요 게임)
+  · 예전에 저장한 기종 값은 비슷한 이름으로 자동 선택
+[수정]
+- 전체화면 옵션이 적용되지 않던 문제 수정
+  · PCem : --fullscreen 추가
+  · 86Box : -F 추가, 전체화면 안내창 끔
+  · DOSBox 계열 : -fullscreen 추가
+- 도움말 말풍선을 닫을 때 오류(ObjectDisposedException)가 나던 문제 수정
+[화면]
+- 런처 패키지 폴더가 지정되면 직접 DOSBox 설정 항목을 접어서 표시
+- 런처 패키지 폴더 상태에 패키지 안의 실행기 표시 (DOSBox · DOSBox-X · PCem · 86Box)
+- 긴 설명 문단을 없애고 항목 제목 옆 [?] 를 누르면 설명이 보이도록 변경
+- 기종 제목 아래 설명 문장 제거
+
 [Ver.51] 2026-11-24
 - DOS 및 WIn 95, Win 98 추가
 ==== 이전 업데이트 ====
